@@ -14,9 +14,7 @@ This repository is licensed under the
 If you use this code for your research, please cite our paper:
 
 @InProceedings{10.1007/978-3-031-98691-8_17,
-
 author="Abdallah, Bashayer
-
 and Raza, Shan E. Ahmed",
 editor="Ali, Sharib
 and Hogg, David C.
