@@ -1,3 +1,6 @@
+
+
+
 import torch.nn.functional as F
 import os
 from PIL import Image
@@ -91,11 +94,9 @@ def compute_errors(gt, pred):
                 silog=silog, sq_rel=sq_rel)
 
 
+  # a gradient-based edge detection method to generate the Edge map
 
-import torch
-import torch.nn as nn
-
-class ScharrEdgeDetector(nn.Module):                       # a gradient-based edge detection method
+class ScharrEdgeDetector(nn.Module):                     
     def __init__(self):
         super(ScharrEdgeDetector, self).__init__()
         self.scharr_x = None
@@ -147,3 +148,4 @@ class ScharrEdgeDetector(nn.Module):                       # a gradient-based ed
         magnitude = (magnitude - magnitude_min) / (magnitude_max - magnitude_min + 1e-6)  # Adding epsilon for stability
 
         return magnitude
+
