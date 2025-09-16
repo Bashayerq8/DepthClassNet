@@ -12,7 +12,6 @@ This repository is licensed under the
 
 ## Citation
 If you use this code for your research, please cite our paper:
-
 ```bibtex
 @InProceedings{10.1007/978-3-031-98691-8_17,
   author    = {Abdallah, Bashayer and Raza, Shan E. Ahmed},
