@@ -1,9 +1,9 @@
 # DepthClassNet
-### Environment
-Python 3.11.10 is recommended.
-PyTorch ≥ 2.2
-See requirements.txt for full dependencies.
-
+## Environment
+- Python **3.11.10** (recommended)  
+- PyTorch **≥ 2.2**  
+- See **requirements.txt** for full dependencies
+  
 ### Create virtual environment
 python3 -m venv myenv
 
