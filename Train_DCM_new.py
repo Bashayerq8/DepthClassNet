@@ -325,34 +325,21 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # Dataset setup
-    root_dir = "Data/data"
-
-    train_dataset, val_dataset, test_dataset = prepare_dataset(root_dir)
-
-    train_loader = DataLoader(dataset=train_dataset, batch_size=6, shuffle=True)
-    val_loader = DataLoader(dataset=val_dataset, batch_size=6, shuffle=False)
-    test_loader = DataLoader(dataset=test_dataset, batch_size=1, shuffle=False)
-
-    train_labels = [train_dataset.dataset.classes[i] for i in train_dataset.indices]
-    val_labels = [val_dataset.dataset.classes[i] for i in val_dataset.indices]
-    test_labels = [test_dataset.dataset.classes[i] for i in test_dataset.indices]
-    all_labels = set(train_labels + val_labels + test_labels)
-    ontology = sorted(set(all_labels))
-
-    # train_file = "Data/ucl_train.txt"
-    # val_file = "Data/ucl_val.txt"
-    # test_file = "Data/ucl_test.txt"
-    # train_dataset, val_dataset, test_dataset = prepare_dataset(root_dir, train_file, val_file, test_file)
-    #
-    # # DataLoaders
-    # train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
-    # val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=2, pin_memory=True)
-    # test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=2, pin_memory=True)
+    root_dir = "Data/data"   
+    train_file = "Data/ucl_train.txt"
+    val_file = "Data/ucl_val.txt"
+    test_file = "Data/ucl_test.txt"
+    train_dataset, val_dataset, test_dataset = prepare_dataset(root_dir, train_file, val_file, test_file)
+    
+    # DataLoaders
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=2, pin_memory=True)
+    test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False, num_workers=2, pin_memory=True)
 
     # Build ontology from dataset labels
-    # all_labels = set(train_dataset.classes) | set(val_dataset.classes) | set(test_dataset.classes)
-    # ontology = sorted(set(all_labels))
-    # print("Ontology (union of classes):", ontology)
+    all_labels = set(train_dataset.classes) | set(val_dataset.classes) | set(test_dataset.classes)
+    ontology = sorted(set(all_labels))
+    print("Ontology (union of classes):", ontology)
 
     ################## to use GPU by id ##################
     # Create model
