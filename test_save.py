@@ -1,5 +1,14 @@
 
-# This code is to test the model and save the predicted DM with its corresponding GT in a directory   (The accurate final outputs)
+'''
+Copyright (c) 2025 Bashayer Abdallah
+Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+Commercial use is prohibited.
+
+'''
+
+
+
+# This code is to test the model and save the predicted DM with its corresponding GT in a directory  
 
 import matplotlib.pyplot as plt
 import numpy as np
