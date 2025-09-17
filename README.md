@@ -1,5 +1,5 @@
 # DepthClassNet
-##Environment
+### Environment
 Python 3.11.10 is recommended.
 PyTorch ≥ 2.2
 See requirements.txt for full dependencies.
@@ -10,7 +10,7 @@ python3 -m venv myenv
 ### Activate environment
 source myenv/bin/activate  
 
-# Install dependencies
+### Install dependencies
 pip install -r requirements.txt
 
 ## Checkpoints:
