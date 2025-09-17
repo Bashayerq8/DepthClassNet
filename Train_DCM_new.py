@@ -1,7 +1,11 @@
 
-#  Correct Version - Don't change !!!
+'''
 
+Copyright (c) 2025 Bashayer Abdallah
+Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+Commercial use is prohibited.
 
+'''
 import os
 import glob
 import torch
@@ -13,16 +17,13 @@ from datetime import datetime
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from Function import ScharrEdgeDetector, compute_errors, EarlyStoppingWithCheckpoint
-from torch.optim.lr_scheduler import OneCycleLR, CosineAnnealingLR, ReduceLROnPlateau
-# from torch.optim.lr_scheduler import ReduceLROnPlateau     # high results
+from torch.optim.lr_scheduler import ReduceLROnPlateau  
 import torchvision.transforms as transforms
 from autodistill_sam_clip import SAMCLIP  # Import SAMCLIP from autodistill_sam_clip
 from Loss import SILogLoss, EdgeLoss, depth_loss_function
-# from classPrep import prepare_dataset
+from classPrep import prepare_dataset
 from DepthClass import DepthClass
-from DataLoad import prepare_dataset
-# from New_DCN import DepthClass
-# from DepthClass_concat import DepthClass_concat
+
 
 
 import warnings
@@ -481,10 +482,10 @@ if __name__ == "__main__":
         }, epoch_checkpoint_path)
         print(f"Checkpoint for epoch {epoch + 1} saved at {epoch_checkpoint_path}.")
 
-        # Check early stopping criteria
-        # if early_stopping(val_loss, model):
-        #     print("Early stopping triggered.")
-        #     break
+        Check early stopping criteria
+        if early_stopping(val_loss, model):
+            print("Early stopping triggered.")
+            break
 
     # Save the final model checkpoint (using a fixed filename)
     final_model_path = os.path.join(checkpoint_dir, 'final_model.pth')
@@ -508,12 +509,3 @@ if __name__ == "__main__":
     print("Testing completed.")
 
 
-
-'''
-
-Each image still has a ground truth label (its true class) that tells you which one of the ontology entries is correct for that image. 
-While the ontology provides the candidate class descriptions prompts used in the forward pass (to get text embeddings and similarity scores), 
-the class_labels from the dataset are needed as ground truth targets for computing the classification loss.
-Without the ground truth, I wouldn't know which candidate in the ontology is the correct class for a given image.
-
-'''
