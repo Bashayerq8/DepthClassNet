@@ -1,4 +1,8 @@
-
+'''
+Copyright (c) 2025 Bashayer Abdallah
+Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+Commercial use is prohibited.
+'''
 
 
 import torch.nn.functional as F
@@ -94,8 +98,8 @@ def compute_errors(gt, pred):
                 silog=silog, sq_rel=sq_rel)
 
 
-  # a gradient-based edge detection method to generate the Edge map
 
+# a gradient-based edge detection method to generate the Edge map
 class ScharrEdgeDetector(nn.Module):                     
     def __init__(self):
         super(ScharrEdgeDetector, self).__init__()
@@ -148,4 +152,5 @@ class ScharrEdgeDetector(nn.Module):
         magnitude = (magnitude - magnitude_min) / (magnitude_max - magnitude_min + 1e-6)  # Adding epsilon for stability
 
         return magnitude
+
 
