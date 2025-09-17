@@ -1,3 +1,12 @@
+
+'''
+Copyright (c) 2025 Bashayer Abdallah
+Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+Commercial use is prohibited.
+
+'''
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -56,33 +65,12 @@ class EdgeLoss(nn.Module):
 
 
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
-# Assuming SILogLoss, BerHuLoss, and EdgeLoss classes are defined as above
-
-def test_loss_function(loss_fn, input_tensor, target_tensor, name):
-    try:
-        # Forward pass through the loss function
-        loss_value = loss_fn(input_tensor, target_tensor)
-
-        # Check if the output contains NaN or is not finite
-        if torch.isnan(loss_value) or not torch.isfinite(loss_value):
-            print(f"[ERROR] Loss function '{name}' produced NaN or invalid value.")
-        else:
-            print(f"[SUCCESS] Loss function '{name}' output: {loss_value.item()}")
-    except Exception as e:
-        print(f"[ERROR] Exception occurred in loss function '{name}': {e}")
-
-
-
-
-
+# From MDE-ED (https://ieeexplore.ieee.org/document/11084697)
 def edge_loss(pred_depth, gt_depth):
     grad_pred = torch.abs(pred_depth[:, :, 1:, :] - pred_depth[:, :, :-1, :]) + \
                 torch.abs(pred_depth[:, :, :, 1:] - pred_depth[:, :, :, :-1])
     grad_gt = torch.abs(gt_depth[:, :, 1:, :] - gt_depth[:, :, :-1, :]) + \
               torch.abs(gt_depth[:, :, :, 1:] - gt_depth[:, :, :, :-1])
     edge_loss = F.l1_loss(grad_pred, grad_gt)
+
     return edge_loss
