@@ -1,3 +1,13 @@
+
+# Copyright (c) 2025 Bashayer Abdallah
+# Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+# Commercial use is prohibited.
+
+'''
+The DataLoader creates batches by combining multiple samples, returning the RGB, Depth, Edge images, and Class Labels for the batch.
+The dataset split follows SoftEnNet (https://arxiv.org/abs/2301.08157)
+'''
+
 import os
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -79,7 +89,7 @@ class ColonDepthDataset(Dataset):
         return rgb_image, depth_image, edge_image, class_label
 
 
-# Utility to load file list from text files
+
 # Utility to load file list from text files
 def load_file_list(file_path):
     """
@@ -141,46 +151,4 @@ def prepare_dataset(root_dir, train_file, val_file, test_file):
     return train_dataset, val_dataset, test_dataset
 
 
-# # Main integration for training and evaluation
-# if __name__ == "__main__":
-#     # File paths
-#     root_dir = "Data/data"
-#     train_file = "Data/ucl_train.txt"
-#     val_file = "Data/ucl_val.txt"
-#     test_file = "Data/ucl_test.txt"
-#
-#     # Prepare datasets
-#     train_dataset, val_dataset, test_dataset = prepare_dataset(root_dir, train_file, val_file, test_file)
-#
-#     # Data loaders
-#     batch_size = 2
-#     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
-#     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
-#     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
-#
-#     # Example of using the DataLoader
-#     for i, (rgb, depth, edge, class_label) in enumerate(train_loader):
-#         print(f"DEBUG: Batch {i + 1}:")
-#         print(f"  RGB Shape: {rgb.shape}")
-#         print(f"  Depth Shape: {depth.shape}")
-#         print(f"  Edge Shape: {edge.shape}")
-#         print(f"  Class Label: {class_label}")
-#         break  # Only show the first batch
 
-
-'''
-The data split is as follows for SoftEnNet (https://arxiv.org/abs/2301.08157)
-
-How the Output is Generated
-Class Label Assignment:
-During dataset creation (ColonDepthDataset), the class of each sample is extracted using the extract_classes function, which maps the class string (e.g., T3_L1) to its corresponding numerical value using class_map.
-DataLoader Behavior:
-
-The DataLoader creates batches by combining multiple samples. Here, it groups 2 samples (batch_size=2), returning the RGB, Depth, Edge images, and Class Labels for the batch.
-Batch Content:
-The RGB, Depth, and Edge tensors are loaded and transformed according to the specified transformations (Resize, Normalize, etc.), ensuring they are ready for input into a neural network.
-
-Class Labels:
-The Class Label tensor is a PyTorch tensor containing the numerical class indices for the samples in the batch.
-
-'''
