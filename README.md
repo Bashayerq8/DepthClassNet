@@ -1,4 +1,17 @@
 # DepthClassNet
+##Environment
+Python 3.11.10 is recommended.
+PyTorch ≥ 2.2
+See requirements.txt for full dependencies.
+
+### Create virtual environment
+python3 -m venv myenv
+
+### Activate environment
+source myenv/bin/activate  
+
+# Install dependencies
+pip install -r requirements.txt
 
 ## Checkpoints:
 https://livewarwickac-my.sharepoint.com/:u:/g/personal/u2191607_live_warwick_ac_uk/EfUTsqll2CpGkhtK6BP3JdgBTBtmhPZWxF1xldApteRibQ?email=bashayer.q8%40gmail.com&e=bmqgYY
