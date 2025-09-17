@@ -14,10 +14,8 @@ pip install -r requirements.txt
 
 ## Datasets
 
-- UCL colonoscopy dataset (links). Do not redistribute. Provide your own paths.
-- C3VD (link).
-- Note: follow dataset licenses. This repo does not host patient data.
-
+- [UCL colonoscopy dataset](http://cmic.cs.ucl.ac.uk/ColonoscopyDepth/)
+- [C3VD](https://durrlab.github.io/C3VD/).
 
 
 ## Checkpoints:
