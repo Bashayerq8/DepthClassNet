@@ -1,3 +1,10 @@
+
+# Copyright (c) 2025 Bashayer Abdallah
+# Licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+# Commercial use is prohibited.
+
+
+
 import os
 import torch
 import torch.optim as optim
@@ -21,7 +28,6 @@ warnings.filterwarnings("ignore", category=UserWarning)
 print(torch.cuda.is_available())
 
 
-# Training function
 def train(model, dataloader, criterion_depth, criterion_class, optimizer, device, scheduler=None):
     model.train()
     depth_alfa = 0.80
@@ -298,3 +304,4 @@ if __name__ == "__main__":
 
     predictions, ground_truths, class_predictions, class_ground_truths = test(model, test_loader, device)
     print("Testing completed.")
+
