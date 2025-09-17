@@ -1,0 +1,91 @@
+
+
+
+import os
+import glob
+import cv2
+import numpy as np
+from torch.utils.data import Dataset
+import torchvision.transforms as T
+
+
+class C3VD_Dataset(Dataset):
+    def __init__(self, data_dir, list_path, mode='Train', image_size=256):
+        """
+        - data_dir: root folder of C3VD
+        - list_path: path to your .txt listing depth & color files
+        - mode: 'Train'|'Val'|'Test'  (Test can pass a Python list of lines instead of a file)
+        """
+        self.data_dir = data_dir
+
+        # --- load lines from your .txt ---
+        if mode in ('Train','Val'):
+            with open(list_path, 'r') as f:
+                lines = [ln.strip() for ln in f if ln.strip()]
+        elif mode == 'Test':
+            # if you pass in a Python list already
+            lines = list_path
+        else:
+            raise ValueError("mode must be 'Train','Val' or 'Test'")
+
+        # --- build (img, depth) pairs ---
+        self.pairs = []
+        for ln in lines:
+            # split into two relative paths
+            depth_rel, img_rel = ln.split()
+            # normalize backslashes to your OS separator
+            depth_rel = depth_rel.replace('\\', os.sep)
+            img_rel   = img_rel.replace('\\',   os.sep)
+            depth_p   = os.path.join(data_dir, depth_rel)
+            img_p     = os.path.join(data_dir, img_rel)
+
+            if not os.path.isfile(depth_p):
+                raise RuntimeError(f"Depth file not found: {depth_p}")
+            if not os.path.isfile(img_p):
+                raise RuntimeError(f"Image file not found: {img_p}")
+
+            self.pairs.append((img_p, depth_p))
+
+        if len(self.pairs)==0:
+            raise RuntimeError("No (img,depth) pairs found. Check your list file & data_dir.")
+
+        # joint resize & center-crop, then to tensor
+        self.image_size = 224
+        self.transform_rgb = T.Compose([
+            T.ToPILImage(),
+            T.Resize(self.image_size, interpolation=T.InterpolationMode.BILINEAR),
+            T.CenterCrop(self.image_size),
+            T.ToTensor(),
+        ])
+
+        self.transform_dpth = T.Compose([
+            T.ToPILImage(),
+            T.Resize(image_size, interpolation=T.InterpolationMode.BILINEAR),
+            T.CenterCrop(image_size),
+            T.ToTensor(),
+        ])
+
+
+    def __len__(self):
+        return len(self.pairs)
+
+    def __getitem__(self, idx):
+        img_p, depth_p = self.pairs[idx]
+
+        # --- load and preprocess image ---
+        img = cv2.imread(img_p, cv2.IMREAD_UNCHANGED)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        if img.dtype == np.uint16:
+            img = (img/256).astype(np.uint8)
+        img = img.astype(np.float32)/255.0
+
+        # --- load and preprocess depth ---
+        dep = cv2.imread(depth_p, cv2.IMREAD_UNCHANGED)
+        dep = dep.astype(np.float32)/65535.0
+        dep = np.expand_dims(dep, axis=2)  # H×W×1 for ToTensor
+
+        # --- apply transform ---
+        img_t = self.transform_rgb(img)
+        dep_t = self.transform_dpth(dep)
+
+        return img_t, dep_t
