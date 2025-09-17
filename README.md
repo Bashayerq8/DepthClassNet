@@ -4,10 +4,8 @@
 - PyTorch **≥ 2.2**  
 - See **requirements.txt** for full dependencies
   
-### Create virtual environment
+### Create & activate virtual environment 
 python3 -m venv myenv
-
-### Activate environment
 source myenv/bin/activate  
 
 ### Install dependencies
