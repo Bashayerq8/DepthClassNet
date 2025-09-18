@@ -1,4 +1,6 @@
 # DepthClassNet
+This software project accompanies the research paper: **DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging**, by **Bashayer Abdallah** and **Shan E. Ahmed Raza** (MIUA 2025, LNCS, pp. 230–246, Springer). [Springer link](https://link.springer.com/chapter/10.1007/978-3-031-98691-8_17) • DOI: 10.1007/978-3-031-98691-8_17
+
 ## Environment
 - Python **3.11.10** (recommended)  
 - PyTorch **≥ 2.2**  
@@ -15,7 +17,7 @@ pip install -r requirements.txt
 ## Datasets
 
 - [UCL colonoscopy dataset](http://cmic.cs.ucl.ac.uk/ColonoscopyDepth/)
-- [C3VD](https://durrlab.github.io/C3VD/).
+- [C3VD](https://durrlab.github.io/C3VD/)
 
 
 ## Checkpoints:
