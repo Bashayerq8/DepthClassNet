@@ -42,9 +42,9 @@ pip install -r requirements.txt
 - [UCL colonoscopy dataset](http://cmic.cs.ucl.ac.uk/ColonoscopyDepth/)
 - [C3VD](https://durrlab.github.io/C3VD/)
 
-  
+  - > **Once downloaded, organise the datasets exactly as shown below; the dataloader relies on this layout.**
+
 ### Dataset tree
-- > **Once downloaded, organise the datasets exactly as shown below; the dataloader relies on this layout.**
 
 ```text
 Data/
@@ -71,6 +71,7 @@ Data/
     ├── ucl_train.txt
     ├── ucl_val.txt
     └── ucl_test.txt
+
 
 
 ##  DepthClassNet Checkpoints:
