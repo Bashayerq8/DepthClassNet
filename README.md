@@ -44,33 +44,34 @@ pip install -r requirements.txt
 
 - > **Once downloaded, organise the datasets exactly as shown below; the dataloader relies on this layout.**
 
+### Dataset tree
+
+```text
 Data/
-├─ c3vd/
-│  ├─ cecum_t1_a/
-│  │  ├─ 0000_color.png
-│  │  ├─ 0000_depth.tiff
-│  │  ├─ ……
-│  │  ├─ 0275_color.png
-│  │  └─ 0275_depth.tiff
-│  ├─ cecum_t1_b/
-│  │  ├─ 0000_color.png
-│  │  ├─ 0000_depth.tiff
-│  │  └─  ……
-│  ├─ cecum_t2_b/
-│  …
-│  └─ trans_t4_a/
-│     
-├─ ucl/
-│  ├─ C_T3_L2_3_resized_FrameBuffer_0315.png
-│  ├─ C_T3_L2_3_resized_Depth_0315.png
-│  …
-│  ├─ C_T3_L2_3_resized_FrameBuffer_4515.png
-│  └─ C_T3_L2_3_resized_Depth_4515.png
-│
-└─ splits/
-   ├─ ucl_train.txt
-   ├─ ucl_val.txt
-   └─ ucl_test.txt
+├── c3vd/
+│   ├── cecum_t1_a/
+│   │   ├── 0000_color.png
+│   │   ├── 0000_depth.tiff
+│   │   ├── …
+│   │   ├── 0275_color.png
+│   │   └── 0275_depth.tiff
+│   ├── cecum_t1_b/
+│   │   ├── 0000_color.png
+│   │   ├── 0000_depth.tiff
+│   │   └── …
+│   ├── cecum_t2_b/
+│   └── trans_t4_a/
+├── ucl/
+│   ├── C_T3_L2_3_resized_FrameBuffer_0315.png
+│   ├── C_T3_L2_3_resized_Depth_0315.png
+│   ├── …
+│   ├── C_T3_L2_3_resized_FrameBuffer_4515.png
+│   └── C_T3_L2_3_resized_Depth_4515.png
+└── splits/
+    ├── ucl_train.txt
+    ├── ucl_val.txt
+    └── ucl_test.txt
+
 
 ##  DepthClassNet Checkpoints:
 Official pretrained weights can be downloaded here:
