@@ -7,12 +7,10 @@
 </p>
 
 
-
-
-<img src="assets/ucl.webp" alt="DepthClassNet predictions on the UCL dataset" style="width:60%;">
-
-<img src="assets/C3vd.webp" alt="DepthClassNet predictions on the C3VD dataset" style="width:60%;">
-
+<p align="center">
+  <img src="assets/C3vd.webp" alt="DepthClassNet predictions on the C3VD dataset" width="700"><br>
+  <em>DepthClassNet predictions on the UCL dataset</em>
+</p>
 
 
 ## Environment
