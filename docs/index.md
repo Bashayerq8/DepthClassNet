@@ -1,6 +1,6 @@
 ---
 title: DepthClassNet – Official Code
-description: DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging (MIUA 2025, LNCS).
+description: "DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging (MIUA 2025, LNCS)."
 ---
 
 # DepthClassNet – Official Code
