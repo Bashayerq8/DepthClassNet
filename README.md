@@ -1,14 +1,10 @@
 # DepthClassNet
 **Official implementation of** *DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging* (Abdallah & Raza, MIUA 2025). [Springer](https://link.springer.com/chapter/10.1007/978-3-031-98691-8_17) • DOI: 10.1007/978-3-031-98691-8_17
 
-![Model architecture](assets/ucl.webp "DepthClassNet predictions on the UCL dataset")
-
-
-![Model architecture](assets/C3vd.webp "DepthClassNet predictions on the C3VD dataset")
-
-
 
 <img src="assets/ucl.webp" alt="DepthClassNet predictions on the UCL dataset" style="width:60%;">
+
+<img src="assets/C3vd.webp" alt="DepthClassNet predictions on the C3VD dataset" style="width:60%;">
 
 
 
