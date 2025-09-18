@@ -15,12 +15,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 import re
 
-# Define the class map
-class_map = {
-    "T1_L1": 0, "T1_L2": 1, "T1_L3": 2,
-    "T2_L1": 3, "T2_L2": 4, "T2_L3": 5,
-    "T3_L1": 6, "T3_L2": 7, "T3_L3": 8
-}
+
 
 # Extract main and sub classes from the base name
 def extract_classes(base_name):
@@ -149,6 +144,7 @@ def prepare_dataset(root_dir, train_file, val_file, test_file):
     # print(f"DEBUG: Test dataset size: {len(test_dataset)}")
 
     return train_dataset, val_dataset, test_dataset
+
 
 
 
