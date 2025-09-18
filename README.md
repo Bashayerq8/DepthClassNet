@@ -8,6 +8,9 @@
 
 
 
+<img src="assets/ucl.webp" alt="DepthClassNet predictions on the UCL dataset" style="width:60%;">
+
+
 
 ## Environment
 - Python **3.11.10** (recommended)  
