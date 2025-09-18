@@ -21,7 +21,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torchvision.transforms as transforms
 from autodistill_sam_clip import SAMCLIP  # Import SAMCLIP from autodistill_sam_clip
 from Loss import SILogLoss, EdgeLoss, depth_loss_function
-from classPrep import prepare_dataset
+from ucl_loader import prepare_dataset
 from DepthClass import DepthClass
 
 
