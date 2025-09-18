@@ -44,7 +44,6 @@ pip install -r requirements.txt
 
 - > **Once downloaded, organise the datasets exactly as shown below; the dataloader relies on this layout.**
 
-### Dataset tree
 
 ```text
 Data/
