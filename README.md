@@ -18,6 +18,9 @@
 </p>
 
 **Keywords:** monocular depth estimation, depth prediction, endoscopy, colonoscopy, medical imaging, PyTorch, multitask learning, texture classification, Swin Transformer, CLIP
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-%E2%89%A52.2-red)
 
 
 ## Environment
