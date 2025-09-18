@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 - > **Once downloaded, organise the datasets exactly as shown below; the dataloader relies on this layout.**
 
-- Data/
+Data/
 ├─ c3vd/
 │  ├─ cecum_t1_a/
 │  │  ├─ 0000_color.png
