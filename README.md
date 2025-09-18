@@ -90,14 +90,21 @@ This repository is licensed under the
 If you use this code for your research, please cite our paper:
 ```bibtex
 @InProceedings{10.1007/978-3-031-98691-8_17,
-  author    = {Abdallah, Bashayer and Raza, Shan E. Ahmed},
-  editor    = {Ali, Sharib and Hogg, David C. and Peckham, Michelle},
-  title     = {DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging},
-  booktitle = {Medical Image Understanding and Analysis},
-  year      = {2026},
-  publisher = {Springer Nature Switzerland},
-  address   = {Cham},
-  pages     = {230--246}
+author="Abdallah, Bashayer
+and Raza, Shan E. Ahmed",
+editor="Ali, Sharib
+and Hogg, David C.
+and Peckham, Michelle",
+title="DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging",
+booktitle="Medical Image Understanding and Analysis",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="230--246",
+abstract="Monocular depth estimation can play a critical role in medical imaging, providing spatial information that enhances diagnostic accuracy and supports precise surgical interventions. The texture classification in the endoscopic images significantly contributes to the differentiation of tissue types and the identification of pathological changes. Building on this knowledge, we introduce DepthClassNet, an innovative multitask framework designed to simultaneously perform monocular depth estimation and texture classification in endoscopic imaging. Our approach employs a tri-encoder model to integrate RGB images, edge maps, and textual descriptions. The architecture comprises a SWIN transformer as an image encoder, a convolutional neural network (CNN) as an edge encoder, and a modified CLIP text encoder for embedding class textual descriptions. Features from the image and edge encoders are effectively combined via a Feature Fusion Module (FFM), and high-resolution depth outputs are reconstructed through a decoder and depth projection block. We introduce an image embedding block that converts visual data from the SWIN encoder into embeddings that align with CLIP text embeddings. The classification head then computes similarity scores, scales them by a learnable temperature {\$}{\$}t{\$}{\$}t, and converts them into probabilities. By designing a loss function that combines depth, edge and classification losses with specific weights, our multitask architecture achieves state-of-the-art results on the Colonoscopy Depth - UCL dataset for depth estimation and texture classification.",
+isbn="978-3-031-98691-8"
 }
+
+
 
 
