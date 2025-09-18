@@ -33,7 +33,7 @@
 python3 -m venv myenv
 source myenv/bin/activate  
 
-### Install dependencies
+### DepthClassNet Installation dependencies
 pip install -r requirements.txt
 
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 - [C3VD](https://durrlab.github.io/C3VD/)
 
 
-## Checkpoints:
+##  DepthClassNet Checkpoints:
 Official pretrained weights can be downloaded here:
 [DepthClassNet Checkpoints (OneDrive)](https://livewarwickac-my.sharepoint.com/:u:/g/personal/u2191607_live_warwick_ac_uk/EfUTsqll2CpGkhtK6BP3JdgBTBtmhPZWxF1xldApteRibQ?email=bashayer.q8%40gmail.com&e=bmqgYY)
 
