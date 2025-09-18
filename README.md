@@ -7,7 +7,7 @@
 **Official implementation of** *DepthClassNet: A Multitask Framework for Monocular Depth Estimation and Texture Classification in Endoscopic Imaging* (Abdallah & Raza, MIUA 2025).  
 [Springer](https://link.springer.com/chapter/10.1007/978-3-031-98691-8_17) • DOI: **10.1007/978-3-031-98691-8_17**
 
-**DepthClassNet** is a multitask framework for **monocular depth estimation** and **texture classification** in **endoscopic (colonoscopy) imaging**. It predicts per-pixel depth from a single RGB frame while classifying tissue texture, improving spatial understanding and scene interpretation for downstream clinical research.  
+**DepthClassNet** is a novel multitask framework for **monocular depth estimation** and **texture classification** in **endoscopic (colonoscopy) imaging**. It predicts per-pixel depth from a single RGB frame while classifying tissue texture, improving spatial understanding and scene interpretation for downstream clinical research.  
 
 <p align="center">
   <img src="assets/DepthClassNet_ucl.webp" alt="DepthClassNet predictions on the UCL dataset" width="600"><br>
