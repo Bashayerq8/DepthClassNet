@@ -10,7 +10,7 @@
 **DepthClassNet** is a multitask framework for **monocular depth estimation** and **texture classification** in **endoscopic (colonoscopy) imaging**. It predicts per-pixel depth from a single RGB frame while classifying tissue texture, improving spatial understanding and scene interpretation for downstream clinical research.  
 
 <p align="center">
-  <img src="assets/ucl.webp" alt="DepthClassNet predictions on the UCL dataset" width="600"><br>
+  <img src="assets/DepthClassNet_ucl.webp" alt="DepthClassNet predictions on the UCL dataset" width="600"><br>
   <em>DepthClassNet predictions on the UCL dataset</em>
 </p>
 
@@ -18,13 +18,13 @@
 
 
 <p align="center">
-  <img src="assets/C3vd.webp" alt="DepthClassNet predictions on the C3VD dataset" width="600"><br>
+  <img src="assets/DepthClassNet_c3vd.webp" alt="DepthClassNet predictions on the C3VD dataset" width="600"><br>
   <em>DepthClassNet predictions on the UCL dataset</em>
 </p>
 
 **Keywords:** monocular depth estimation, depth prediction, endoscopy, colonoscopy, medical imaging, PyTorch, multitask learning, texture classification, Swin Transformer, CLIP
 
-## Environment
+## DepthClassNet Environment
 - Python **3.11.10** (recommended)  
 - PyTorch **≥ 2.2**  
 - See **requirements.txt** for full dependencies
