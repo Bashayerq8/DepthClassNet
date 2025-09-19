@@ -2,3 +2,7 @@ url: "https://bashayerq8.github.io"
 baseurl: "/DepthClassNet"
 plugins:
   - jekyll-sitemap
+
+exclude:
+  - "google*.html"
+
