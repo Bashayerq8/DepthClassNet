@@ -1,2 +1,5 @@
+url: "https://bashayerq8.github.io"
+baseurl: "/DepthClassNet"
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
