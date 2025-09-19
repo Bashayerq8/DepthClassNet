@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bashayerq8.github.io/DepthClassNet/sitemap.xml
