@@ -16,7 +16,7 @@ import torch.nn as nn
 
 
 # Training loop with early stopping and checkpoint saving
-class EarlyStoppingWithCheckpoint:
+class earlyStoppingWithCheckpoint:
     def __init__(self, patience=5, min_delta=0, checkpoint_path='best_model.pth'):
         self.patience = patience
         self.min_delta = min_delta
@@ -100,7 +100,7 @@ def compute_errors(gt, pred):
 
 
 # a gradient-based edge detection method to generate the Edge map
-class ScharrEdgeDetector(nn.Module):                     
+class scharrEdgeDetector(nn.Module):                     
     def __init__(self):
         super(ScharrEdgeDetector, self).__init__()
         self.scharr_x = None
@@ -146,11 +146,12 @@ class ScharrEdgeDetector(nn.Module):
         # Calculate gradient magnitude
         magnitude = torch.sqrt(grad_x ** 2 + grad_y ** 2 + 1e-6)  # Adding epsilon to avoid sqrt(0)
 
-        # Normalize the magnitude to [0, 1]
+        # Normalise the magnitude to [0, 1]
         magnitude_min = magnitude.view(magnitude.size(0), -1).min(dim=1)[0].view(-1, 1, 1, 1)
         magnitude_max = magnitude.view(magnitude.size(0), -1).max(dim=1)[0].view(-1, 1, 1, 1)
         magnitude = (magnitude - magnitude_min) / (magnitude_max - magnitude_min + 1e-6)  # Adding epsilon for stability
 
         return magnitude
+
 
 
