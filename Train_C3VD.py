@@ -18,7 +18,7 @@ import torch.optim as optim
 from datetime import datetime
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from Function import ScharrEdgeDetector, compute_errors, EarlyStoppingWithCheckpoint
+from function import scharrEdgeDetector, compute_errors, earlyStoppingWithCheckpoint
 from torch.optim.lr_scheduler import OneCycleLR, CosineAnnealingLR, ReduceLROnPlateau
 import torchvision.transforms as transforms
 from autodistill_sam_clip import SAMCLIP  # Import SAMCLIP from autodistill_sam_clip
