@@ -16,7 +16,7 @@ from FFM import FFM
 from autodistill_sam_clip import SAMCLIP  
 
 
-class DepthClass(nn.Module):
+class depthClass(nn.Module):
     def __init__(self, ontology):
         super(DepthClass, self).__init__()
 
