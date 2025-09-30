@@ -12,7 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class SILogLoss(nn.Module):
+class siLogLoss(nn.Module):
     def __init__(self):
         super(SILogLoss, self).__init__()
         self.name = 'SILog'
@@ -31,7 +31,7 @@ class SILogLoss(nn.Module):
         return 10 * torch.sqrt(Dg + eps)
 
 
-class BerHuLoss(nn.Module):
+class berHuLoss(nn.Module):
     def __init__(self, threshold_ratio=0.2):              #The threshold ratio determines the point at which the loss switches from L1 to L2.
         super(BerHuLoss, self).__init__()
         self.threshold_ratio = threshold_ratio
@@ -56,7 +56,7 @@ class BerHuLoss(nn.Module):
         return loss
 
 
-class EdgeLoss(nn.Module):
+class edgeLoss(nn.Module):
     def forward(self, edge_map_pred, edge_map_gt):
         eps = 1e-6
         # Add epsilon to both prediction and ground truth to ensure no zero-values lead to NaNs
@@ -74,3 +74,4 @@ def edge_loss(pred_depth, gt_depth):
     edge_loss = F.l1_loss(grad_pred, grad_gt)
 
     return edge_loss
+
