@@ -20,7 +20,7 @@ class BaseModule(nn.Module):
 
 
 
-class FFM(BaseModule):
+class ffm(BaseModule):
     """FeatureFusion Module for SWIN & CNN features fusion.
         Args:
             in_channels (List[int]): Number of input channels per scale.
