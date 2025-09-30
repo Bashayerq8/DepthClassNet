@@ -16,13 +16,13 @@ import torch.optim as optim
 from datetime import datetime
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from Function import ScharrEdgeDetector, compute_errors, EarlyStoppingWithCheckpoint
+from function import scharrEdgeDetector, compute_errors, earlyStoppingWithCheckpoint
 from torch.optim.lr_scheduler import ReduceLROnPlateau  
 import torchvision.transforms as transforms
 from autodistill_sam_clip import SAMCLIP  # Import SAMCLIP from autodistill_sam_clip
-from Loss import SILogLoss, EdgeLoss, depth_loss_function
+from loss import siLogLoss, edgeLoss, depth_loss_function
 from ucl_loader import prepare_dataset
-from DepthClass import DepthClass
+from depthClass import depthClass
 
 
 
