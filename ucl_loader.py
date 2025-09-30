@@ -32,7 +32,7 @@ def extract_classes(base_name):
 
 
 # Define the ColonDepthDataset with class labels
-class ColonDepthDataset(Dataset):
+class colonDepthDataset(Dataset):
     def __init__(self, root_dir, file_list, transform=None, depth_transform=None):
         self.root_dir = root_dir
         self.transform = transform
@@ -144,6 +144,7 @@ def prepare_dataset(root_dir, train_file, val_file, test_file):
     # print(f"DEBUG: Test dataset size: {len(test_dataset)}")
 
     return train_dataset, val_dataset, test_dataset
+
 
 
 
