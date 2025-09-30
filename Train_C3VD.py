@@ -22,9 +22,9 @@ from Function import ScharrEdgeDetector, compute_errors, EarlyStoppingWithCheckp
 from torch.optim.lr_scheduler import OneCycleLR, CosineAnnealingLR, ReduceLROnPlateau
 import torchvision.transforms as transforms
 from autodistill_sam_clip import SAMCLIP  # Import SAMCLIP from autodistill_sam_clip
-from Loss import SILogLoss, EdgeLoss, depth_loss_function
-from c3vd_loader import C3VD_Dataset
-from DepthClass import DepthClass
+from loss import siLogLoss, edgeLoss, depth_loss_function
+from c3vd_loader import c3VD_Dataset
+from depthClass import depthClass
 
 
 
