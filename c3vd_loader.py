@@ -34,7 +34,7 @@ def extract_label(image_name):
     texture_sub = parts[2]
     return f"The predicted depth Map from {origin_class} with Texture {texture_condition}{texture_sub}"
 
-class C3VD_Dataset(Dataset):
+class c3VD_Dataset(Dataset):
 
     def __init__(self, data_dir, image_size=518):
         self.data_dir = data_dir
