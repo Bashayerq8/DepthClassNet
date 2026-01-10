@@ -77,8 +77,7 @@ Data/
 
 ##  DepthClassNet Checkpoints:
 Official pretrained weights can be downloaded here:
-[DepthClassNet Checkpoints (OneDrive)](https://livewarwickac-my.sharepoint.com/:u:/g/personal/u2191607_live_warwick_ac_uk/EfUTsqll2CpGkhtK6BP3JdgBTBtmhPZWxF1xldApteRibQ?email=bashayer.q8%40gmail.com&e=bmqgYY)
-https://drive.google.com/file/d/1UQlEnQX9HGf4jENI3cNLeYu1RJaKULAo/view?usp=sharing 
+[DepthClassNet Checkpoints (OneDrive)](https://drive.google.com/file/d/1UQlEnQX9HGf4jENI3cNLeYu1RJaKULAo/view?usp=sharing) 
 
 ## License
 This repository is licensed under the 
